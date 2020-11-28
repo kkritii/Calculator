@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Javascript Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' href='style.css'> -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="Calc">
+        <form name="form">
+            <input name="textview" class="textview" id ="textview" >
+            <input name="textview1" class="textview" id="textview1" value="0">
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" class="bn" value="7" onclick="document.form.textview.value+='7'" ></td>
+                <td><input type="button" class="bn" value="8" onclick="document.form.textview.value+='8'" ></td>
+                <td><input type="button" class="bn" value="9" onclick="document.form.textview.value+='9'" ></td>
+                <td><input type="button" class="bn" value="/" onclick="document.form.textview.value+='/'" ></td>
+                <td><input type="button" class="bn" value="^" onclick="document.form.textview.value+='^'" ></td>  
+            </tr>
+            <tr>
+                <td><input type="button" class="bn" value="4" onclick="document.form.textview.value+='4'" ></td>
+                <td><input type="button" class="bn" value="5" onclick="document.form.textview.value+='5'" ></td>
+                <td><input type="button" class="bn" value="6" onclick="document.form.textview.value+='6'" ></td>
+                <td><input type="button" class="bn" value="×" onclick="document.form.textview.value+='*'" ></td>
+                <td><input type="button" class="bn" value="√" onclick="document.form.textview.value+='√'" ></td>
+                
+            </tr>
+            <tr>
+                <td><input type="button" class="bn" value="1" onclick="document.form.textview.value+='1'" ></td>
+                <td><input type="button" class="bn" value="2" onclick="document.form.textview.value+='2'" ></td>
+                <td><input type="button" class="bn" value="3" onclick="document.form.textview.value+='3'" ></td>
+                <td><input type="button" class="bn" value="-" onclick="document.form.textview.value+='-'" ></td>
+                <td><input type="button" class="bn" value="+" onclick="document.form.textview.value+='+'" ></td>  
+            </tr>
+            <tr>
+                <td><input type="button" class="bn" value="0" onclick="document.form.textview.value+='0'" ></td>
+                <td><input type="button" class="bn" value="." onclick="document.form.textview.value+='.'" ></td>
+                <td><input type="button" class="bn" value="C" onclick="clr()"></td>
+                <td><input type="button" class="bn" value="bs" onclick="back()" ></td>
+                <td><input type="button" class="bn" value="=" onclick="equal()" ></td>  
+            </tr>
+        </table>
+
+    </div>
+    
+</body>
+</html>
