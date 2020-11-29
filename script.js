@@ -1,9 +1,22 @@
 function equal(){
     document.getElementById('textview1').value=0;
-    var exp = document.form.textview.value;		
-	if (exp) {
-		document.form.textview1.value=eval(exp);
-	}
+    var exp = document.form.textview.value;	
+    var rootIdx = exp.search("√");
+    if (rootIdx >= 0) {
+        brokenExp = exp.split("√");
+        if (brokenExp[0] === "") {
+            document.form.textview1.value = Math.sqrt(eval(brokenExp[1]));
+        } else {
+            document.form.textview1.value = eval(brokenExp[0]) * Math.sqrt(eval(brokenExp[1]));
+        }
+    }
+    else if (exp) {
+        document.form.textview1.value=eval(exp);
+
+    }
+    else{
+       document.form.textview1.value ='ERR'; 
+    }
 }
 function back(){
     document.form.textview1.value=0;

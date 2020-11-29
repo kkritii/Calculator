@@ -5,13 +5,15 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Javascript Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' href='style.css'> -->
+    <link rel='stylesheet' type='text/css' href='style.css'>
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="Calc">
+    <div id="container">
+    <h1><b>Calculator</b></h1>
+    <div id="calc">
         <form name="form">
-            <input name="textview" class="textview" id ="textview" >
+            <input name="textview" class="textview" id ="textview" ><br>
             <input name="textview1" class="textview" id="textview1" value="0">
         </form>
         <table>
@@ -20,7 +22,7 @@
                 <td><input type="button" class="bn" value="8" onclick="document.form.textview.value+='8'" ></td>
                 <td><input type="button" class="bn" value="9" onclick="document.form.textview.value+='9'" ></td>
                 <td><input type="button" class="bn" value="/" onclick="document.form.textview.value+='/'" ></td>
-                <td><input type="button" class="bn" value="^" onclick="document.form.textview.value+='^'" ></td>  
+                <td><input type="button" class="bn" value="%" onclick="document.form.textview.value+='%'" ></td>  
             </tr>
             <tr>
                 <td><input type="button" class="bn" value="4" onclick="document.form.textview.value+='4'" ></td>
@@ -40,13 +42,16 @@
             <tr>
                 <td><input type="button" class="bn" value="0" onclick="document.form.textview.value+='0'" ></td>
                 <td><input type="button" class="bn" value="." onclick="document.form.textview.value+='.'" ></td>
-                <td><input type="button" class="bn" value="C" onclick="clr()"></td>
+                <td><input type="button" class="bn1" value="C" onclick="clr()"></td>
                 <td><input type="button" class="bn" value="bs" onclick="back()" ></td>
                 <td><input type="button" class="bn" value="=" onclick="equal()" ></td>  
             </tr>
         </table>
-
+        </div>
+        <hr>
+        <div id="footer">Kriti  &copy;  2020</div>
     </div>
+
     
 </body>
 </html>
